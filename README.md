@@ -40,7 +40,7 @@ It provides these functions:
         host_name=HOST_NAME,
         service_description=SERVICE_DESCRIPTION)
 
-It can be configured in Django settings.py by modifing:
+It can be configured in Django settings.py:
 
     NAGIOS_NSCA = "/usr/sbin/send_nsca"
     NAGIOS_TARGET_HOST = "nagios.coex.cz"
