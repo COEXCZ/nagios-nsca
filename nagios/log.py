@@ -11,4 +11,4 @@ MAP_LEVEL_NAGIOS = {
 
 class NagiosHandler(logging.Handler):
     def emit(self, record):
-        send(record.message, service_status=MAP_LEVEL_NAGIOS[record.levelno])
+        nagios.send(record.message, service_status=MAP_LEVEL_NAGIOS[record.levelno])
