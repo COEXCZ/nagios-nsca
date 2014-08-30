@@ -3,6 +3,10 @@ nagios-nsca
 
 Nagios passive checks support for Python (and Django).
 
+License
+-------
+OSI Approved - GNU Lesser General Public License v3 (LGPLv3)
+
 Installation
 ------------
 
