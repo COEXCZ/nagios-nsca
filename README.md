@@ -3,7 +3,21 @@ nagios-nsca
 
 Nagios passive checks support for Python (and Django).
 
-It provides these functions:
+Installation
+------------
+
+```bash
+$ pip install nagios-nsca
+```
+
+Basic usage
+-----------
+
+    from nagios import send_warning
+    send_warning('Something is wrong there.')
+    
+Available functions
+-------------------
 
     send(message, 
         nsca=NSCA, 
@@ -40,10 +54,33 @@ It provides these functions:
         host_name=HOST_NAME,
         service_description=SERVICE_DESCRIPTION)
 
-It can be configured in Django settings.py:
+Integration within Django
+-------------------------
+
+settings.py:
 
     NAGIOS_NSCA = "/usr/sbin/send_nsca"
     NAGIOS_TARGET_HOST = "nagios.coex.cz"
     NAGIOS_HOST_NAME = ""
     NAGIOS_SERVICE_DESCRIPTION = ""
     NAGIOS_DISABLED = False
+
+logging module:
+
+    LOGGING = {
+        ...
+        'handlers': {
+            ...
+            'nagios': {
+                'level': 'CRITICAL',
+                'class': 'nagios.log.NagiosHandler'
+            }
+        },
+        'loggers': {
+            ...
+            'project': {
+                'handlers': [..., 'nagios'],
+                'level': 'INFO',
+            },
+        },
+    }
