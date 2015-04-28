@@ -7,7 +7,7 @@ DESCRIPTION = "Nagios passive checks support"
 AUTHOR = "Jan Češpivo, COEX CZ s.r.o (http://www.coex.cz)"
 AUTHOR_EMAIL = "jan.cespivo@gmail.com"
 URL = "https://github.com/COEXCZ/nagios-nsca"
-VERSION = '1.1.0'
+VERSION = '1.1.1'
 
 setup(
     name=NAME,
