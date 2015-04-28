@@ -25,8 +25,5 @@ setup(
         "License :: OSI Approved :: LGPLv3",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-    ],
-    install_requires=[
-        "simplejson",
-    ],
+    ]
 )
